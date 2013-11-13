@@ -1,3 +1,6 @@
+.DS_Store
+*.sublime*
+sftp-config.json
 .htaccess
 wp-config.php
 wp-content/uploads/
@@ -10,4 +13,10 @@ sitemap.xml
 *.log
 wp-content/cache/
 wp-content/backups/
+sitemap.xml
 sitemap.xml.gz
+old.plugins
+.sass-cache
+/*
+/*/
+!/wp-content/
