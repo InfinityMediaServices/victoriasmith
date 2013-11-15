@@ -1,0 +1,51 @@
+/*
+	Theme Name: Victoria Smith
+	Description: A custom theme for Victoria Smith.
+	Author: Infinity Media Services Inc.
+	Author URL: infinitymedia.ca
+	Version: 1.0
+*/
+
+html { padding:0; margin:0; }
+
+body { background-color:#fff; margin:0; padding:0; font-size:13px; line-height:1.5; color:#1c1c1c; text-align:left; font-family:Helvetica, sans-serif; }
+
+h2 { color:#bed730; font-weight:normal; margin:0 0 10px 0; }
+h3 { font-weight:normal; }
+h4 { font-size:100%; color:#5b3280; }
+
+.alignleft { float: left; margin:0 10px 10px 0; }
+.alignright { float: right; margin:0 0 10px 10px;}
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+#container { max-width:1020px; margin:0 auto; padding:30px 0; }
+
+#header { position:relative; }
+	#logo a { background:url(images/vs_logo.png) top left no-repeat; width:141px; height:71px; display:block; text-indent:-10000px; overflow:hidden; float:right; }
+	.menu-main-menu-container { clear:right; padding:2.5rem 0 0 0; }
+		ul#menu-main-menu { list-style:none; padding:0; margin:0; clear:right; border-top:1px solid #bed730; width:100%; }
+			ul#menu-main-menu li { display:inline-block; padding:0 15px; }
+				ul#menu-main-menu li:first-child { padding-left:0; }
+				ul#menu-main-menu li:last-child { padding-right:0; }
+				ul#menu-main-menu li:hover, ul#menu-main-menu li.current-menu-item { background-color:#bed730; }
+				ul#menu-main-menu li a { text-transform:uppercase; text-decoration:none; color:#474749; display:block; padding:18px 5px 10px; text-align:center; }
+					ul#menu-main-menu li:hover a, ul#menu-main-menu li.current-menu-item a { color:#fff; }
+
+/* Home Page */
+#home.entry-container { width:100%; margin:40px 0 0; }
+	.image-slider { width:100%; background:red; height:100px; margin-bottom:40px; }
+	.home-content { width:80%; margin:0 auto; }
+		#home p { color:#5b3280; }
+		#blocks { margin-top:40px; }
+			.block { float:left; margin-left:3%; width:31%;  }
+				.block:first-child { margin-left:0; }
+				.block-one { background-color:#5c2d91; color:#fff; }
+				.block-two { background-color:#bed730; color:#fff; }
+				.block-three { background-color:#fdb813; color:#fff; }
+					.block .inner-wrapper { width:83%; margin:0 auto; }
+				#home .block p { color:#fff; }
+			
+/* Internal Pages */
+.entry-container { margin-top:40px; }
+	.post-thumbnail { width:23%; float:left; }
+	.shifted-content { width:77%; float:left; }
