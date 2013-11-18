@@ -1,5 +1,5 @@
 	<div style="clear:both;"></div>
-</div><!--#container-->
+</div><!--.container-->
 
 <?php wp_footer(); ?>
 

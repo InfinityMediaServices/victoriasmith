@@ -5,7 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/responsive.css" />
 
 <title><?php
         if ( is_single() ) { single_post_title(); print ' | '; bloginfo('name'); }
@@ -40,12 +41,21 @@ jQuery(document).ready(function($){
 
 <body>
 
-<div id="container">
+<div class="container">
 
 	<div id="header">
-    
-    	<h1 id="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+    	<div class="row">    
+            <h1 id="logo" class="pull-right">
+                <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+            </h1>
+        </div>
         
-        <?php wp_nav_menu(); ?>
-    
+        <div class="navbar">
+        	<div class="navbar-inner">
+				<?php wp_nav_menu(array(
+                    'container_class' => 'container',
+                    'menu_class'=> 'nav'
+                )); ?>
+    		</div>
+        </div>
     </div><!--#header-->

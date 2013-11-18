@@ -1,0 +1,54 @@
+/* Customize the navbar links to be fill the entire space of the .navbar */
+/* Header*/
+#header {
+  position: relative;
+}
+#logo {
+  float: right;
+  margin-bottom: 2.5rem;
+}
+#logo a {
+  background: url(../images/vs_logo.png) top left no-repeat;
+  width: 141px;
+  height: 71px;
+  display: block;
+  text-indent: -10000px;
+  overflow: hidden;
+}
+.navbar .navbar-inner {
+  padding: 0;
+  border-top: 1px solid #bed730;
+}
+.navbar .nav {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  display: table;
+}
+.navbar .nav li {
+  display: table-cell;
+  float: none;
+}
+.navbar .nav li a {
+  text-align: center;
+  text-transform: uppercase;
+  color: #474749;
+  display: block;
+  padding: 18px 13px 10px;
+  white-space: nowrap;
+}
+.navbar .nav li:hover,
+.navbar .nav li.current-menu-item {
+  background-color: #bed730;
+}
+.navbar .nav li a:hover,
+.navbar .nav li:hover a,
+.navbar .nav li.current-menu-item a {
+  color: #fff;
+  text-decoration: none;
+}
+/*
+			ul#menu-main-menu li { display:inline-block; padding:0 15px; }
+				ul#menu-main-menu li:first-child { padding-left:0; }
+				ul#menu-main-menu li:last-child { padding-right:0; }
+					*/
