@@ -8,39 +8,50 @@
             
             </div><!--.image-slider-->
             
-            <div class="home-content">
+            <div class="home-content row">
+            	<div class="span10 offset1">
         
-                <h2><?php the_title(); ?></h2>
+                    <h2><?php the_title(); ?></h2>
+                    
+                    <?php the_content(); ?>
                 
-                <?php the_content(); ?>
-            
-                <div id="blocks">
-                    <div class="block block-one">
-                        <div class="inner-wrapper">
-                            <h3>Upcoming Workshops</h3>
-                            
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. </p>
-                         </div><!--.inner-wrapper-->
-                    </div>
-                    
-                    <div class="block block-two">
-                        <div class="inner-wrapper">
-                            <h3>Upcoming Workshops</h3>
-                            
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. </p>
-                         </div><!--.inner-wrapper-->
-                    </div>
-                    
-                    <div class="block block-three">
-                        <div class="inner-wrapper">
-                            <h3>Upcoming Workshops</h3>
-                            
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. Ut nec venenatis mauris. </p>
-                         </div><!--.inner-wrapper-->
-                    </div>
-                    
-                    <div style="clear:left;"></div>
-                </div><!--#blocks-->
+                    <div id="blocks" class="row-fluid">
+                        <div class="block block-one span4">
+                        	<div class="row-fluid">
+                                <div class="inner-wrapper offset1 span10">
+                                    <h3>Upcoming Workshops</h3>
+                                    
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. </p>
+                                    
+                                    <p><a href="#" class="read-more">Learn More</a></p>
+                                 </div><!--.inner-wrapper-->
+                             </div>
+                        </div>
+                        
+                        <div class="block block-two span4">
+                        	<div class="row-fluid">
+                                <div class="inner-wrapper offset1 span10">
+                                    <h3>Upcoming Workshops</h3>
+                                    
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. </p>
+                                    <p><a href="#" class="read-more">Read More</a></p>
+                                 </div><!--.inner-wrapper-->
+                             </div>
+                        </div>
+                        
+                        <div class="block block-three span4">
+                        	<div class="row-fluid">
+                                <div class="inner-wrapper offset1 span10">
+                                    <h3>Upcoming Workshops</h3>
+                                    
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. Ut nec venenatis mauris. </p>
+                                    <p><a href="#" class="read-more">Book Now</a></p>
+                                 </div><!--.inner-wrapper-->
+                             </div>
+                        </div>
+                        
+                    </div><!--#blocks-->
+            	</div><!--.span10 offset1-->
             </div><!--.home-content-->
         
         <?php endwhile; endif; ?>

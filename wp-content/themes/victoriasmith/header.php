@@ -25,7 +25,7 @@
 jQuery(document).ready(function($){
 
 	// set home featured boxes to same height
-	var maxHeight = -1;
+	/*var maxHeight = -1;
 
 	$('.block').each(function() {
 		maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
@@ -33,7 +33,7 @@ jQuery(document).ready(function($){
 	
 	$('.block').each(function() {
 		$(this).height(maxHeight);
-	});
+	});*/
 });
 </script>
 

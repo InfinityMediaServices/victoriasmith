@@ -676,11 +676,11 @@ a.badge:focus {
 }
 .label-warning,
 .badge-warning {
-  background-color: #f89406;
+  background-color: #fdb813;
 }
 .label-warning[href],
 .badge-warning[href] {
-  background-color: #c67605;
+  background-color: #db9b02;
 }
 .label-success,
 .badge-success {
@@ -887,18 +887,18 @@ a.badge:focus {
 }
 .progress-warning .bar,
 .progress .bar-warning {
-  background-color: #faa732;
-  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
-  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
-  background-image: -o-linear-gradient(top, #fbb450, #f89406);
-  background-image: linear-gradient(to bottom, #fbb450, #f89406);
+  background-color: #fdc641;
+  background-image: -moz-linear-gradient(top, #fecf5f, #fdb813);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fecf5f), to(#fdb813));
+  background-image: -webkit-linear-gradient(top, #fecf5f, #fdb813);
+  background-image: -o-linear-gradient(top, #fecf5f, #fdb813);
+  background-image: linear-gradient(to bottom, #fecf5f, #fdb813);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffecf5f', endColorstr='#fffdb813', GradientType=0);
 }
 .progress-warning.progress-striped .bar,
 .progress-striped .bar-warning {
-  background-color: #fbb450;
+  background-color: #fecf5f;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -1099,6 +1099,7 @@ a.badge:focus {
 /* Header*/
 #header {
   position: relative;
+  margin-bottom: 40px;
 }
 #logo {
   float: right;
@@ -1131,7 +1132,7 @@ a.badge:focus {
   text-transform: uppercase;
   color: #474749;
   display: block;
-  padding: 18px 13px 10px;
+  padding: 10px 13px 10px;
   white-space: nowrap;
 }
 .navbar .nav li:hover,
@@ -1144,8 +1145,48 @@ a.badge:focus {
   color: #fff;
   text-decoration: none;
 }
-/*
-			ul#menu-main-menu li { display:inline-block; padding:0 15px; }
-				ul#menu-main-menu li:first-child { padding-left:0; }
-				ul#menu-main-menu li:last-child { padding-right:0; }
-					*/
+/* Home Page */
+.home-content {
+  color: #5c2d91;
+}
+#blocks {
+  margin-top: 40px;
+}
+.block {
+  color: #ffffff;
+}
+.block h3 {
+  font-weight: normal;
+}
+.block-one {
+  background: #5c2d91;
+}
+.block-two {
+  background: #bed730;
+}
+.block-three {
+  background: #fdb813;
+}
+/* Internal Pages */
+.post-thumbnail {
+  margin-top: 19px;
+}
+/* Constants */
+h2 {
+  color: #bed730;
+  font-weight: normal;
+}
+h4 {
+  color: #5c2d91;
+}
+a.read-more {
+  background: #ffffff;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #636467;
+  padding: 5px 10px;
+}
+.entry-container {
+  margin-bottom: 20px;
+}

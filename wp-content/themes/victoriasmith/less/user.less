@@ -1,7 +1,7 @@
   /* Customize the navbar links to be fill the entire space of the .navbar */
   
 	  /* Header*/
-	  #header { position:relative; }
+	  #header { position:relative; margin-bottom:40px; }
 	  	#logo { float:right; margin-bottom:2.5rem; }
 			#logo a { background:url(../images/vs_logo.png) top left no-repeat; width:141px; height:71px; display:block; text-indent:-10000px; overflow:hidden; }
 
@@ -25,14 +25,29 @@
 		text-transform:uppercase; 
 		color:#474749;
 		display:block;
-		padding:18px 13px 10px;
+		padding:10px 13px 10px;
 		white-space:nowrap;
 	  }
 	  	.navbar .nav li:hover, .navbar .nav li.current-menu-item { background-color:#bed730; }
 		  	.navbar .nav li a:hover, .navbar .nav li:hover a, .navbar .nav li.current-menu-item a { color:#fff; text-decoration:none; }
 	  
-	  		/*
-			ul#menu-main-menu li { display:inline-block; padding:0 15px; }
-				ul#menu-main-menu li:first-child { padding-left:0; }
-				ul#menu-main-menu li:last-child { padding-right:0; }
-					*/
+
+	/* Home Page */
+	.home-content { color:@purple; }
+	#blocks { margin-top:40px; }
+		.block { color:@white; }
+			.block h3 { font-weight:normal; }
+			.block-one { background:@purple; }
+			.block-two { background:@yellow; } 
+			.block-three { background:@orange; }
+		
+	/* Internal Pages */
+	.post-thumbnail { margin-top:19px; }
+	
+	/* Constants */
+	h2 { color:@yellow; font-weight:normal; }
+	h4 { color:@purple; }
+	
+	a.read-more { background:@white; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; color:@grey; padding:5px 10px; }
+	
+	.entry-container { margin-bottom:20px; }
