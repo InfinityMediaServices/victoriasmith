@@ -20,6 +20,7 @@
 <?php wp_head(); ?>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
 jQuery(document).ready(function($){
@@ -51,11 +52,31 @@ jQuery(document).ready(function($){
         </div>
         
         <div class="navbar">
-        	<div class="navbar-inner">
-				<?php wp_nav_menu(array(
-                    'container_class' => 'container',
-                    'menu_class'=> 'nav'
-                )); ?>
-    		</div>
-        </div>
+            <div class="navbar-inner">
+                <div class="container">
+                
+                
+                
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                
+                    <div class="nav-collapse collapse">
+                        <ul id="menu-main-menu" class="nav">
+                            <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="http://victoriasmith.ca/dev/5-2/">Credentials</a></li>
+                            <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="http://victoriasmith.ca/dev/services/">Services</a></li>
+                            <li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a href="http://#">Collaborative Process</a></li>
+                            <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a href="http://#">Workshops</a></li>
+                            <li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a href="http://#">Articles</a></li>
+                            <li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="http://#">Testimonials</a></li>
+                            <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a href="http://#">Links</a></li>
+                            <li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="http://#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div><!--.container-->
+            </div><!--.navbar-inner-->
+        </div><!--.navbar-->
+
     </div><!--#header-->
