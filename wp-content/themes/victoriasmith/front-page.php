@@ -11,14 +11,12 @@
             <div class="home-content row">
             	<div class="span10 offset1">
         
-                    <h2><?php the_title(); ?></h2>
-                    
                     <?php the_content(); ?>
                 
                     <div id="blocks" class="row-fluid">
                         <div class="block block-one span4">
                         	<div class="row-fluid">
-                                <div class="inner-wrapper offset1 span10">
+                                <div class="inner-wrapper">
                                     <h3>Upcoming Workshops</h3>
                                     
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. </p>
@@ -30,7 +28,7 @@
                         
                         <div class="block block-two span4">
                         	<div class="row-fluid">
-                                <div class="inner-wrapper offset1 span10">
+                                <div class="inner-wrapper">
                                     <h3>Upcoming Workshops</h3>
                                     
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. </p>
@@ -41,7 +39,7 @@
                         
                         <div class="block block-three span4">
                         	<div class="row-fluid">
-                                <div class="inner-wrapper offset1 span10">
+                                <div class="inner-wrapper">
                                     <h3>Upcoming Workshops</h3>
                                     
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta ut lorem gravida venenatis. Ut nec venenatis mauris. Ut nec venenatis mauris. </p>
