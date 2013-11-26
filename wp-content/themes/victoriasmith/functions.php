@@ -29,7 +29,7 @@ function my_custom_post_workshops() {
 		'not_found'          => __( 'No results found' ),
 		'not_found_in_trash' => __( 'No results found in the Trash' ), 
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Testimonials'
+		'menu_name'          => 'Workshops'
 	);
 	$args = array(
 		'labels'        => $labels,
