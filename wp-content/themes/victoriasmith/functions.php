@@ -12,6 +12,7 @@ set_post_thumbnail_size( 150, 150, true ); // W x H, hard crop
 
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'featured-siderail', 212, 9999 );
+	add_image_size( 'home-slider', 9999, 146, true );
 }
 
 // Add Custom Post Type

@@ -7,6 +7,8 @@
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/responsive.css" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/flexslider.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic' rel='stylesheet' type='text/css'>
 
 <title><?php
         if ( is_single() ) { single_post_title(); print ' | '; bloginfo('name'); }
@@ -21,6 +23,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider.js"></script>
 
 <script type="text/javascript">
 function do_box_resize(){
@@ -37,6 +40,17 @@ jQuery(document).ready(function($){
        // set featured boxes to same height
        $(window).resize(do_box_resize);
        do_box_resize();
+	   
+	   //flexslider
+		$('.flexslider').flexslider({
+			controlNav: false,
+			directionNav: false,
+			animation: "slide",
+    animationLoop: false,
+    itemWidth: 210,
+    itemMargin: 5
+		});
+
 });
 </script>
 
