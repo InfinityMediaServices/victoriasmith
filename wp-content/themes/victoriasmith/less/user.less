@@ -79,13 +79,22 @@
 			.block-three { background:@orange; }
 		.inner-wrapper { margin:0 8.547008547008547%; }	
 		
+		.image-slider { height: 146px; overflow: hidden; position: relative; width: 100%; }
+		.image-slider ul { list-style:none; padding:0; margin:0; width:10000px; }
+			.image-slider ul li { float:left; }
+		
 	/* Internal Pages */
 	.post-thumbnail { margin-top:19px; }
 	
 	/* Constants */
-	h2 { color:@yellow; font-weight:normal; }
-	h4 { color:@purple; }
+	h1, h2, h3, h4, h5, h6 { font-family:'Signika Negative', sans-serif; line-height:1.2; }
+	h2 { color:@yellow; font-weight:normal;font-size:2.3em; }
+	h3 { color:@purple; font-size:1.5em; }
+		.home-content h3 { color:@white;}
+	h4 { color:@purple; margin-bottom:-12px; }
 	
-	a.read-more { background:@white; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; color:@grey; padding:5px 10px; }
+	a { color:@purple; text-decoration:underline; }
+		a:hover { color:@purple; text-decoration:none; }
+		a.read-more { background:@white; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; color:@grey; padding:5px 10px; text-decoration:none; }
 	
 	.entry-container { margin-bottom:20px; }

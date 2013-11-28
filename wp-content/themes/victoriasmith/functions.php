@@ -44,4 +44,10 @@ function my_custom_post_workshops() {
 }
 add_action( 'init', 'my_custom_post_workshops' );
 
+// Add Theme Admin Options Page in Dashboard
+	add_action('admin_menu', 'plugin_admin_add_page');
+	function plugin_admin_add_page() {
+		add_options_page('Custom Plugin Page', 'Custom Plugin Menu', 'manage_options', 'plugin', 'plugin_options_page');
+	}
+
 ?>

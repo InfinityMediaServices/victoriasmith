@@ -7,8 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/responsive.css" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/flexslider.css" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Signika+Negative' rel='stylesheet' type='text/css'>
 
 <title><?php
         if ( is_single() ) { single_post_title(); print ' | '; bloginfo('name'); }
@@ -23,7 +22,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider.js"></script>
 
 <script type="text/javascript">
 function do_box_resize(){
@@ -37,20 +35,47 @@ function do_box_resize(){
 }
 
 jQuery(document).ready(function($){
-       // set featured boxes to same height
-       $(window).resize(do_box_resize);
-       do_box_resize();
+	// set featured boxes to same height
+	$(window).resize(do_box_resize);
+	do_box_resize();
 	   
-	   //flexslider
-		$('.flexslider').flexslider({
-			controlNav: false,
-			directionNav: false,
-			animation: "slide",
-    animationLoop: false,
-    itemWidth: 210,
-    itemMargin: 5
+	/* Home Image Slider slider */
+		var scrollSpeed = 30;
+	   
+		// set default position
+		var current = 0;
+	   
+		var containerWidth = 0;   
+		$('.image-slider ul').children().each(function(){
+			containerWidth += $(this).width() + 10;
 		});
-
+		//console.log(containerWidth);
+	   
+		$('.image-slider ul').children().each(function(){
+			$(this).clone().appendTo('.image-slider ul');
+		});
+	   
+		function bgscroll(){
+	   
+			if(current == containerWidth){
+				current = 0;
+			}
+		   
+			//move the slideshow
+			$('.image-slider ul').css('margin-left', '-'+current+'px');
+			current += 1;
+		}
+	   
+		//Calls the scrolling function repeatedly
+		
+		slideshowInterval = setInterval(bgscroll, scrollSpeed);
+	   
+		$('.image-sliders ul').hover(
+			function(){
+				clearInterval(slideshowInterval);
+			}, function() {
+				slideshowInterval = setInterval(bgscroll, scrollSpeed);
+			});  
 });
 </script>
 
