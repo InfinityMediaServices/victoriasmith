@@ -27,11 +27,19 @@
 					$pastWorkshops[] = $post;	
 				}
 				endwhile; endif;
+<<<<<<< HEAD
 				
+=======
+>>>>>>> eb830e979f2df7848fc67d8f15d19a0be44f53dc
 				foreach($upcomingWorkshops as $upcomingWorkshop){ 
 					$post = $upcomingWorkshop;
-				?>
-					<h3><?php echo $workshopExpiry; ?></h3>
+					$wsExpiry = get_custom_field('workshop_expiry');
+				?> 
+				<h3><?php the_title(); ?></h3>
+				<div class="ws-content">
+					<?php the_content(); ?>
+				</div>
+				<div class="ws-expire"><?php echo $wsExpiry; ?></div>
 			<?php	}
 				
 			?>
