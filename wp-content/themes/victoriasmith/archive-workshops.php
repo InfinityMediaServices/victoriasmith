@@ -20,19 +20,19 @@
 			if($workshopsAll->have_posts()) : while($workshopsAll->have_posts()) : $workshopsAll->the_post(); 
 				$workshopExpiry = str_replace('-','', get_custom_field('workshop_expiry'));
 				$today = date('Ymd');
-				echo $today;
 				
 				if($workshopExpiry > $today) {
 					$upcomingWorkshops[] = $post;
 				} elseif($workshopExpiry < $today) {
 					$pastWorkshops[] = $post;	
 				}
+				endwhile; endif;
+				
 				foreach($upcomingWorkshops as $upcomingWorkshop){ 
 					$post = $upcomingWorkshop;
 				?>
 					<h3><?php echo $workshopExpiry; ?></h3>
 			<?php	}
-				endwhile; endif;
 				
 			?>
 			
