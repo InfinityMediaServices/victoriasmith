@@ -26,23 +26,40 @@
 				} elseif($workshopExpiry < $today) {
 					$pastWorkshops[] = $post;	
 				}
-				endwhile; endif;
-<<<<<<< HEAD
-				
-=======
->>>>>>> eb830e979f2df7848fc67d8f15d19a0be44f53dc
-				foreach($upcomingWorkshops as $upcomingWorkshop){ 
-					$post = $upcomingWorkshop;
-					$wsExpiry = get_custom_field('workshop_expiry');
-				?> 
-				<h3><?php the_title(); ?></h3>
-				<div class="ws-content">
-					<?php the_content(); ?>
-				</div>
-				<div class="ws-expire"><?php echo $wsExpiry; ?></div>
-			<?php	}
-				
-			?>
+				endwhile; endif; ?>
+                
+            <h3>Upcoming Collaborative Workshops</h3>
+
+			<?php foreach($upcomingWorkshops as $upcomingWorkshop){ 
+                    $post = $upcomingWorkshop;
+					setup_postdata($post);
+					$workshopDate = get_custom_field('workshop_date');
+					$workshopLocation = get_custom_field('workshop_location');
+                ?> 
+                <div class="ws-content">
+                    <h4><?php the_title(); ?></h4>
+                        <p class="ws-meta"><?php if($workshopDate != '') { echo $workshopDate; } ?>
+                        <?php if($workshopLocation != '') { echo '<br />' . $workshopLocation; } ?></p>
+                        <?php the_content(); ?>
+                </div>
+			<?php } ?>
+
+            <h3>Past Collaborative Workshops</h3>
+
+			<?php foreach($pastWorkshops as $pastWorkshop){ 
+                    $post = $pastWorkshop;
+					setup_postdata($post);
+					$workshopDate = get_custom_field('workshop_date');
+					$workshopLocation = get_custom_field('workshop_location');
+					$year = substr($workshopDate, -4);
+                ?> 
+                <div class="post-ws-content ws-content">
+                    <h4><?php the_title(); ?></h4>
+                        <?php if($workshopLocation != '') { echo $workshopLocation; } ?></p>
+                        <?php the_content(); ?>
+                        <?php echo $year; ?>
+                </div>
+			<?php } ?>
 			
     	</div><!--offset1 span10-->
     </div><!--.entry-container-->

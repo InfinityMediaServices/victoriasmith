@@ -2121,3 +2121,13 @@ a.read-more {
 .entry-container {
   margin-bottom: 20px;
 }
+/* Workshops */
+.ws-content p {
+  margin: 0;
+}
+p.ws-meta {
+  margin: 10px 0;
+}
+.post-ws-content h4 {
+  margin-bottom: 1px;
+}
