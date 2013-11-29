@@ -27,12 +27,17 @@
 				} elseif($workshopExpiry < $today) {
 					$pastWorkshops[] = $post;	
 				}
+				endwhile; endif;
 				foreach($upcomingWorkshops as $upcomingWorkshop){ 
 					$post = $upcomingWorkshop;
-				?>
-					<h3><?php echo $workshopExpiry; ?></h3>
+					$wsExpiry = get_custom_field('workshop_expiry');
+				?> 
+				<h3><?php the_title(); ?></h3>
+				<div class="ws-content">
+					<?php the_content(); ?>
+				</div>
+				<div class="ws-expire"><?php echo $wsExpiry; ?></div>
 			<?php	}
-				endwhile; endif;
 				
 			?>
 			
