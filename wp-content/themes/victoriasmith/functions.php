@@ -15,12 +15,12 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'home-slider', 9999, 146, true );
 }
 
-// Add Custom Post Type
+// Add Workshops Custom Post Type
 function my_custom_post_workshops() {
 	$labels = array(
 		'name'               => _x( 'Workshops', 'post type general name' ),
 		'singular_name'      => _x( 'Workshop', 'post type singular name' ),
-		'add_new'            => _x( 'Add New', 'book' ),
+		'add_new'            => _x( 'Add New', 'workshop' ),
 		'add_new_item'       => __( 'Add New Workshop' ),
 		'edit_item'          => __( 'Edit Workshop' ),
 		'new_item'           => __( 'New Workshop' ),
@@ -43,6 +43,35 @@ function my_custom_post_workshops() {
 	register_post_type( 'workshops', $args );	
 }
 add_action( 'init', 'my_custom_post_workshops' );
+	
+// Add Testimonials Custom Post Type
+function my_custom_post_testimonials() {
+	$labels = array(
+		'name'               => _x( 'Testimonials', 'post type general name' ),
+		'singular_name'      => _x( 'Testimonial', 'post type singular name' ),
+		'add_new'            => _x( 'Add New', 'testimonial' ),
+		'add_new_item'       => __( 'Add New Testimonial' ),
+		'edit_item'          => __( 'Edit Testimonial' ),
+		'new_item'           => __( 'New Testimonial' ),
+		'all_items'          => __( 'All Testimonial' ),
+		'view_item'          => __( 'View Testimonial' ),
+		'search_items'       => __( 'Search Testimonials' ),
+		'not_found'          => __( 'No results found' ),
+		'not_found_in_trash' => __( 'No results found in the Trash' ), 
+		'parent_item_colon'  => '',
+		'menu_name'          => 'Testimonials'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'Testimonial content',
+		'public'        => true,
+		'menu_position' => 20,
+		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+		'has_archive'   => true,
+	);
+	register_post_type( 'testimonials', $args );	
+}
+add_action( 'init', 'my_custom_post_testimonials' );
 	
 // Add Theme Options Tab	
 	// add the admin options page
