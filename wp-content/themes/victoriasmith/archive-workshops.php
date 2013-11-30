@@ -27,7 +27,7 @@
 					$pastWorkshops[] = $post;	
 				}
 				endwhile; endif; ?>
-                
+                <?php if(!empty($upcomingWorkshops)): ?>
             <h3>Upcoming Collaborative Workshops</h3>
 
 			<?php foreach($upcomingWorkshops as $upcomingWorkshop){ 
@@ -42,8 +42,9 @@
                         <?php if($workshopLocation != '') { echo '<br />' . $workshopLocation; } ?></p>
                         <?php the_content(); ?>
                 </div>
-			<?php } ?>
+			<?php } endif; ?>
 
+            <?php if(!empty($upcomingWorkshops)): ?>
             <h3>Past Collaborative Workshops</h3>
 
 			<?php foreach($pastWorkshops as $pastWorkshop){ 
@@ -59,7 +60,7 @@
                         <?php the_content(); ?>
                         <?php echo $year; ?>
                 </div>
-			<?php } ?>
+			<?php } endif;?>
 			
     	</div><!--offset1 span10-->
     </div><!--.entry-container-->
