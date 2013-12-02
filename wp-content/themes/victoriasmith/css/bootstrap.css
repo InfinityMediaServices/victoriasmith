@@ -208,7 +208,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
+  color: #474749;
   background-color: #ffffff;
 }
 a {
@@ -941,7 +941,7 @@ a:focus {
 }
 .navbar-link:hover,
 .navbar-link:focus {
-  color: #333333;
+  color: #474749;
 }
 .navbar .divider-vertical {
   height: 40px;
@@ -1095,7 +1095,7 @@ a:focus {
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #333333;
+  color: #474749;
   text-decoration: none;
 }
 .navbar .nav > .active > a,
@@ -1199,8 +1199,8 @@ a:focus {
 }
 .navbar .nav li.dropdown > a:hover .caret,
 .navbar .nav li.dropdown > a:focus .caret {
-  border-top-color: #333333;
-  border-bottom-color: #333333;
+  border-top-color: #474749;
+  border-bottom-color: #474749;
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
@@ -1338,7 +1338,7 @@ a:focus {
 .navbar-inverse .navbar-search .search-query:focus,
 .navbar-inverse .navbar-search .search-query.focused {
   padding: 5px 15px;
-  color: #333333;
+  color: #474749;
   text-shadow: 0 1px 0 #ffffff;
   background-color: #ffffff;
   border: 0;
@@ -1378,6 +1378,35 @@ a:focus {
 .navbar-inverse .btn-navbar:active,
 .navbar-inverse .btn-navbar.active {
   background-color: #000000 \9;
+}
+.navbar .nav .sub-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  border: 1px solid #bed730;
+  padding: 0;
+  margin-left: 0;
+  background-color: #ffffff;
+  z-index: 100;
+}
+.navbar .nav li {
+  position: relative;
+}
+.navbar .nav li:hover > .sub-menu {
+  display: block;
+}
+.navbar .nav li ul.sub-menu li {
+  display: block;
+  min-width: 100%;
+}
+.navbar .nav li .sub-menu li a {
+  color: #474749;
+  text-align: left;
+  text-transform: none;
+}
+.navbar .nav li .sub-menu li a:hover {
+  color: #ffffff;
 }
 .thumbnails {
   margin-left: -20px;
@@ -1534,11 +1563,11 @@ a.badge:focus {
 }
 .label-inverse,
 .badge-inverse {
-  background-color: #333333;
+  background-color: #474749;
 }
 .label-inverse[href],
 .badge-inverse[href] {
-  background-color: #1a1a1a;
+  background-color: #2e2e2f;
 }
 .btn .label,
 .btn .badge {
@@ -1875,7 +1904,7 @@ a.badge:focus {
   right: 0;
   bottom: 0;
   padding: 15px;
-  background: #333333;
+  background: #474749;
   background: rgba(0, 0, 0, 0.75);
 }
 .carousel-caption h4,
@@ -1967,7 +1996,6 @@ a.badge:focus {
   color: #474749;
   display: block;
   padding: 10px 13px 10px;
-  white-space: nowrap;
 }
 .navbar .nav li:hover,
 .navbar .nav li.current-menu-item {
