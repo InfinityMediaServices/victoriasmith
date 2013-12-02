@@ -76,7 +76,20 @@ jQuery(document).ready(function($){
 			}, function() {
 				slideshowInterval = setInterval(bgscroll, scrollSpeed);
 			});  
+			
+	//fix firefox submenu bug
 	$("#menu-main-menu > li").iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease();
+	
+	//mobile submenus
+	$('.navbar .nav .sub-menu').siblings('a').click(function(e){
+		$submenu = $(this).siblings('.sub-menu');
+		if($submenu.is(':visible')){
+			return;
+		}
+		e.preventDefault();
+		$submenu.slideToggle('fast');
+		return false;
+	});
 });
 
 
