@@ -1379,6 +1379,9 @@ a:focus {
 .navbar-inverse .btn-navbar.active {
   background-color: #000000 \9;
 }
+.navbar .nav li a {
+  text-decoration: none;
+}
 .navbar .nav .sub-menu {
   display: none;
   position: absolute;
@@ -1393,7 +1396,7 @@ a:focus {
 .navbar .nav li {
   position: relative;
 }
-.navbar .nav li:hover > .sub-menu {
+.navbar .nav > li:hover .sub-menu {
   display: block;
 }
 .navbar .nav li ul.sub-menu li {
