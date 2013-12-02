@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    
+    <!-- archive-workshops.php -->
     <div class="entry-container row">
         
 		<div class="offset1 span10"> 
@@ -15,11 +15,12 @@
     	<?php 
 			//run custom query and order it by date value custom meta
 			//the loop through this and test it against current date, throw it in appropriate array based off of that result (store post variable) then do a for each on each of those
+    		$upcomingWorkshops = array();
+    		$pastWorkshops = array();
 			$workshopsAll = new WP_Query('post_type=workshops');
-			
 			if($workshopsAll->have_posts()) : while($workshopsAll->have_posts()) : $workshopsAll->the_post(); 
-				$workshopExpiry = str_replace('-','', get_custom_field('workshop_expiry'));
-				$today = date('Ymd');
+				$workshopExpiry = strtotime(get_custom_field('workshop_expiry'));
+				$today = time();
 				
 				if($workshopExpiry > $today) {
 					$upcomingWorkshops[] = $post;
@@ -44,7 +45,7 @@
                 </div>
 			<?php } endif; ?>
 
-            <?php if(!empty($upcomingWorkshops)): ?>
+            <?php if(!empty($pastWorkshops)): ?>
             <h3>Past Collaborative Workshops</h3>
 
 			<?php foreach($pastWorkshops as $pastWorkshop){ 
