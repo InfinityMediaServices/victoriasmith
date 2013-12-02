@@ -127,4 +127,26 @@ add_action( 'init', 'my_custom_post_testimonials' );
     	var_dump($v);
     	echo "<pre>\n";
     }
+
+add_action( 'widgets_init', 'my_register_sidebars' );
+
+function my_register_sidebars() {
+
+	/* Register the 'primary' sidebar. */
+	register_sidebar(
+		array(
+			'id' => 'home_cta',
+			'name' => __( 'Homepage Blocks' ),
+			'description' => __( 'The Blocks on the Homepage. (Max 3 widgets displayed)' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+
+	/* Repeat register_sidebar() code for additional sidebars. */
+}
+
+
     ?>
