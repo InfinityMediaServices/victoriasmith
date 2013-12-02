@@ -122,4 +122,9 @@ add_action( 'init', 'my_custom_post_testimonials' );
 		}
 		return $newinput;
     }
+    function var_pre($v, $m=""){
+    	echo "<pre>$m".($m != "" ? ":":"")."\n";
+    	var_dump($v);
+    	echo "<pre>\n";
+    }
     ?>

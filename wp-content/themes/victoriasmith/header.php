@@ -76,7 +76,26 @@ jQuery(document).ready(function($){
 			}, function() {
 				slideshowInterval = setInterval(bgscroll, scrollSpeed);
 			});  
+	$("#menu-main-menu > li").iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease();
 });
+
+
+$.fn.iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease = function() {
+    var $el;
+    return this.each(function() {
+    	$el = $(this);
+    	var newDiv = $("<div />", {
+    		"class": "innerWrapper",
+    		"css"  : {
+    			// "height"  : $el.height(),
+    			// "width"   : "100%",
+    			"position": "relative"
+    		}
+    	});
+    	$el.wrapInner(newDiv);    
+    });
+};
+
 </script>
 
 </head>
