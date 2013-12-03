@@ -2132,6 +2132,10 @@ h4 {
   color: #5c2d91;
   margin-bottom: -12px;
 }
+h4.collapseomatic,
+#testimonials h4 {
+  margin-bottom: 0;
+}
 a {
   color: #5c2d91;
   text-decoration: underline;
@@ -2161,4 +2165,26 @@ p.ws-meta {
 }
 .post-ws-content h4 {
   margin-bottom: 1px;
+}
+/* Testimonials */
+.testimonial {
+  position: relative;
+  border-bottom: 1px dotted #5c2d91;
+}
+.testimonial-entry {
+  padding: 0 23px;
+}
+.testimonial:last-child {
+  border-bottom: none;
+}
+.testimonial-entry h4 {
+  padding-bottom: 10px;
+}
+.left-quote {
+  background: url(../images/left-quote.png) top left no-repeat;
+  width: 19px;
+  height: 15px;
+  position: absolute;
+  top: -3px;
+  left: 0;
 }
