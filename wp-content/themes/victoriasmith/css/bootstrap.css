@@ -2075,13 +2075,13 @@ a.badge:focus {
 .block h3 {
   font-weight: normal;
 }
-.block-one {
+#blocks .widget:nth-child(1) {
   background: #5c2d91;
 }
-.block-two {
+#blocks .widget:nth-child(2) {
   background: #bed730;
 }
-.block-three {
+#blocks .widget:nth-child(3) {
   background: #fdb813;
 }
 .inner-wrapper {

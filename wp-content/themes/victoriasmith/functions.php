@@ -138,14 +138,12 @@ function my_register_sidebars() {
 			'id' => 'home_cta',
 			'name' => __( 'Homepage Blocks' ),
 			'description' => __( 'The Blocks on the Homepage. (Max 3 widgets displayed)' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s block span4"><div class="row-fluid"><div class="inner-wrapper">',
+			'after_widget' => '</div></div></div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>'
 		)
 	);
-
-	/* Repeat register_sidebar() code for additional sidebars. */
 }
 
 
