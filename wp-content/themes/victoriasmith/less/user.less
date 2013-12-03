@@ -73,9 +73,9 @@
 	#blocks { margin-top:40px; }
 		.block { color:@white; }
 			.block h3 { font-weight:normal; }
-			#blocks .widget:nth-child(1) { background:@purple; }
-			#blocks .widget:nth-child(2) { background:@yellow; } 
-			#blocks .widget:nth-child(3) { background:@orange; }
+			#blocks .widget:nth-child(3n+1) { background:@purple; }
+			#blocks .widget:nth-child(3n+2) { background:@yellow; } 
+			#blocks .widget:nth-child(3n+3) { background:@orange; }
 		.inner-wrapper { margin:0 8.547008547008547%; }	
 		
 		.image-slider { height: 146px; overflow: hidden; position: relative; width: 100%; }
@@ -89,9 +89,10 @@
 	h1, h2, h3, h4, h5, h6 { font-family:'Signika Negative', sans-serif; line-height:1.2; }
 	h2 { color:@yellow; font-weight:normal;font-size:2.3em; }
 	h3 { color:@purple; font-size:1.5em; }
-		.home-content h3 { color:@white;}
+		h3.widget-title { color:@white;}
 	h4 { color:@purple; margin-bottom:-12px; }
 		h4.collapseomatic, #testimonials h4 { margin-bottom:0; }
+		h4.widget-title { color:@white; margin-bottom:0; }
 	
 	a { color:@purple; text-decoration:underline; }
 		a:hover { color:@purple; text-decoration:none; }
@@ -111,3 +112,6 @@
 		.testimonial-entry h4 { padding-bottom:10px; }
 		
 	.left-quote { background:url(../images/left-quote.png) top left no-repeat; width:19px; height:15px; position:absolute; top:-3px; left:0; }
+	
+	/*Collaborative Process*/
+	#collaborative-process .block { margin-bottom:15px; }

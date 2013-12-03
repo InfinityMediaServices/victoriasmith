@@ -2075,13 +2075,13 @@ a.badge:focus {
 .block h3 {
   font-weight: normal;
 }
-#blocks .widget:nth-child(1) {
+#blocks .widget:nth-child(3n+1) {
   background: #5c2d91;
 }
-#blocks .widget:nth-child(2) {
+#blocks .widget:nth-child(3n+2) {
   background: #bed730;
 }
-#blocks .widget:nth-child(3) {
+#blocks .widget:nth-child(3n+3) {
   background: #fdb813;
 }
 .inner-wrapper {
@@ -2125,7 +2125,7 @@ h3 {
   color: #5c2d91;
   font-size: 1.5em;
 }
-.home-content h3 {
+h3.widget-title {
   color: #ffffff;
 }
 h4 {
@@ -2134,6 +2134,10 @@ h4 {
 }
 h4.collapseomatic,
 #testimonials h4 {
+  margin-bottom: 0;
+}
+h4.widget-title {
+  color: #ffffff;
   margin-bottom: 0;
 }
 a {
@@ -2187,4 +2191,8 @@ p.ws-meta {
   position: absolute;
   top: -3px;
   left: 0;
+}
+/*Collaborative Process*/
+#collaborative-process .block {
+  margin-bottom: 15px;
 }

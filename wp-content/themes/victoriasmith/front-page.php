@@ -1,5 +1,23 @@
 <?php get_header(); ?>
 
+<script type="text/javascript">
+function do_box_resize(){
+   var maxHeight = -1;
+   $('.block').height('auto').each(function() {
+		   maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+   });
+   $('.block').each(function() {
+		   $(this).height(maxHeight);
+   });
+}
+
+jQuery(document).ready(function($){
+	// set featured boxes to same height
+	$(window).resize(do_box_resize);
+	do_box_resize();
+});
+</script>
+
     <div id="home" class="entry-container">
     
     	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
