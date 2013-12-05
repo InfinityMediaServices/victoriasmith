@@ -1392,6 +1392,7 @@ a:focus {
   margin-left: 0;
   background-color: #ffffff;
   z-index: 100;
+  width: 99%;
 }
 .navbar .nav li {
   position: relative;
@@ -1401,7 +1402,6 @@ a:focus {
 }
 .navbar .nav li ul.sub-menu li {
   display: block;
-  min-width: 100%;
 }
 .navbar .nav li .sub-menu li a {
   color: #474749;
