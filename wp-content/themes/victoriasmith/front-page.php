@@ -42,6 +42,10 @@ jQuery(document).ready(function($){
             	<div class="span10 offset1">
         
                     <?php the_content(); ?>
+                    
+                    <div id="get-started-button">
+                    	<a href="#">Get Started</a>
+                    </div>
                                     
                     <div id="blocks" class="row-fluid">
 						<?php dynamic_sidebar( 'home_cta' ); ?>

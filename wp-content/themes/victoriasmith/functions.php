@@ -125,7 +125,7 @@ add_action( 'init', 'my_custom_post_testimonials' );
     function var_pre($v, $m=""){
     	echo "<pre>$m".($m != "" ? ":":"")."\n";
     	var_dump($v);
-    	echo "<pre>\n";
+    	echo "</pre>\n";
     }
 
 add_action( 'widgets_init', 'my_register_sidebars' );
@@ -136,8 +136,20 @@ function my_register_sidebars() {
 	register_sidebar(
 		array(
 			'id' => 'home_cta',
-			'name' => __( 'Homepage Blocks' ),
-			'description' => __( 'The Blocks on the Homepage. (Max 3 widgets displayed)' ),
+			'name' => __( 'Home Page Blocks' ),
+			'description' => __( 'The Blocks on the Home page. (Max 3 widgets displayed)' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s block span4"><div class="row-fluid"><div class="inner-wrapper">',
+			'after_widget' => '</div></div></div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id' => 'contact_cta',
+			'name' => __( 'Contact Page Blocks' ),
+			'description' => __( 'The Blocks on the Contact page. (3 widgets displayed)' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s block span4"><div class="row-fluid"><div class="inner-wrapper">',
 			'after_widget' => '</div></div></div>',
 			'before_title' => '<h3 class="widget-title">',

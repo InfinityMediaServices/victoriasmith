@@ -1407,6 +1407,7 @@ a:focus {
   color: #474749;
   text-align: left;
   text-transform: none;
+  padding: 10px 5px;
 }
 .navbar .nav li .sub-menu li a:hover {
   color: #ffffff;
@@ -2101,6 +2102,17 @@ a.badge:focus {
 }
 .image-slider ul li {
   float: left;
+}
+#get-started-button {
+  padding-top: 15px;
+}
+#get-started-button a {
+  display: block;
+  overflow: hidden;
+  text-indent: -10000px;
+  background: url(../images/vs_get-started-button.png) top left no-repeat;
+  width: 156px;
+  height: 40px;
 }
 /* Internal Pages */
 .post-thumbnail {

@@ -36,32 +36,21 @@
 					setup_postdata($post);
 					$workshopDate = get_custom_field('workshop_date');
 					$workshopLocation = get_custom_field('workshop_location');
+					$workshopContact = get_custom_field('workshop_contact');
+					$workshopContactSeparated = explode(" | ", $workshopContact);
+					$workshopContactName = $workshopContactSeparated[0];
+					$workshopContactEmail = $workshopContactSeparated[1];
                 ?> 
                 <div class="ws-content">
                     <h4><?php the_title(); ?></h4>
                         <p class="ws-meta"><?php if($workshopDate != '') { echo $workshopDate; } ?>
                         <?php if($workshopLocation != '') { echo '<br />' . $workshopLocation; } ?></p>
                         <?php the_content(); ?>
+                        <?php if($workshopContact != '') { ?>
+                        	<p>Contact: <a href="mailto:<?php echo $workshopContactEmail?>"><?php echo $workshopContactName; ?></a></p>
+                        <?php } ?>
                 </div>
 			<?php } endif; ?>
-
-            <?php if(!empty($pastWorkshops)): ?>
-            <h3>Past Collaborative Workshops</h3>
-
-			<?php foreach($pastWorkshops as $pastWorkshop){ 
-                    $post = $pastWorkshop;
-					setup_postdata($post);
-					$workshopDate = get_custom_field('workshop_date');
-					$workshopLocation = get_custom_field('workshop_location');
-					$year = substr($workshopDate, -4);
-                ?> 
-                <div class="post-ws-content ws-content">
-                    <h4><?php the_title(); ?></h4>
-                        <?php if($workshopLocation != '') { echo $workshopLocation; } ?></p>
-                        <?php the_content(); ?>
-                        <?php echo $year; ?>
-                </div>
-			<?php } endif;?>
 			
     	</div><!--offset1 span10-->
     </div><!--.entry-container-->
