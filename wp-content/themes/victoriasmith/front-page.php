@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
                     <?php the_content(); ?>
                     
                     <div id="get-started-button">
-                    	<a href="#">Get Started</a>
+                    	<a href="<?php bloginfo('url'); ?>/contact/">Get Started</a>
                     </div>
                                     
                     <div id="blocks" class="row-fluid">

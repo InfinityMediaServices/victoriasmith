@@ -1,10 +1,13 @@
-<?php get_header(); ?>
-    <!-- archive-workshops.php -->
-    <div class="entry-container row">
+<?php 
+/* Template Name: Upcoming Workshops*/
+get_header(); ?>
+   
+    <div id="collaborative-process" class="entry-container row">
+    	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         
-		<div class="offset1 span10"> 
-        	
-            <h2>Upcoming Collaborative Workshops</h2>
+		<div class="offset1 span7">  
+        
+            <h2><?php the_title(); ?></h2>
                 
     	<?php 
 			//run custom query and order it by date value custom meta
@@ -45,7 +48,14 @@
                 </div>
 			<?php } endif; ?>
 			
-    	</div><!--offset1 span10-->
+    	</div><!--offset1 span7-->
+
+    	<div id="blocks" class="span3">
+            <?php dynamic_sidebar( 'collab_pro' ); ?>
+        </div>
+
+        <?php endwhile; endif; ?>
+        
     </div><!--.entry-container-->
 
 <?php get_footer(); ?>
