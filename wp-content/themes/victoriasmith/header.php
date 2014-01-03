@@ -116,11 +116,11 @@ $.fn.iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease = func
                 
                 
                 
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </a>
+                    </button>
                     
                     <?php wp_nav_menu(array(
 						'container_class' => 'nav-collapse collapse',
