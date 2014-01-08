@@ -47,23 +47,23 @@ add_action( 'init', 'my_custom_post_workshops' );
 // Add Testimonials Custom Post Type
 function my_custom_post_testimonials() {
 	$labels = array(
-		'name'               => _x( 'Testimonials', 'post type general name' ),
-		'singular_name'      => _x( 'Testimonial', 'post type singular name' ),
+		'name'               => _x( 'WS Testimonials', 'post type general name' ),
+		'singular_name'      => _x( 'WS Testimonial', 'post type singular name' ),
 		'add_new'            => _x( 'Add New', 'testimonial' ),
-		'add_new_item'       => __( 'Add New Testimonial' ),
-		'edit_item'          => __( 'Edit Testimonial' ),
-		'new_item'           => __( 'New Testimonial' ),
-		'all_items'          => __( 'All Testimonial' ),
-		'view_item'          => __( 'View Testimonial' ),
-		'search_items'       => __( 'Search Testimonials' ),
+		'add_new_item'       => __( 'Add New WS Testimonial' ),
+		'edit_item'          => __( 'Edit WS Testimonial' ),
+		'new_item'           => __( 'New WS Testimonial' ),
+		'all_items'          => __( 'All WS Testimonials' ),
+		'view_item'          => __( 'View WS Testimonial' ),
+		'search_items'       => __( 'Search WS Testimonials' ),
 		'not_found'          => __( 'No results found' ),
 		'not_found_in_trash' => __( 'No results found in the Trash' ), 
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Testimonials'
+		'menu_name'          => 'WS Testimonials'
 	);
 	$args = array(
 		'labels'        => $labels,
-		'description'   => 'Testimonial content',
+		'description'   => 'Workshops Testimonial content',
 		'public'        => true,
 		'menu_position' => 20,
 		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
@@ -72,6 +72,35 @@ function my_custom_post_testimonials() {
 	register_post_type( 'testimonials', $args );	
 }
 add_action( 'init', 'my_custom_post_testimonials' );
+
+// Add Client Testimonials Custom Post Type
+function client_testimonials() {
+	$labels = array(
+		'name'               => _x( 'Client Testimonials', 'post type general name' ),
+		'singular_name'      => _x( 'Client Testimonial', 'post type singular name' ),
+		'add_new'            => _x( 'Add New', 'testimonial' ),
+		'add_new_item'       => __( 'Add New Client Testimonial' ),
+		'edit_item'          => __( 'Edit Client Testimonial' ),
+		'new_item'           => __( 'New Client Testimonial' ),
+		'all_items'          => __( 'All Client Testimonials' ),
+		'view_item'          => __( 'View Client Testimonial' ),
+		'search_items'       => __( 'Search Client Testimonials' ),
+		'not_found'          => __( 'No results found' ),
+		'not_found_in_trash' => __( 'No results found in the Trash' ), 
+		'parent_item_colon'  => '',
+		'menu_name'          => 'Client Testimonials'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'Client Testimonial content',
+		'public'        => true,
+		'menu_position' => 20,
+		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+		'has_archive'   => true,
+	);
+	register_post_type( 'client-testimonials', $args );	
+}
+add_action( 'init', 'client_testimonials' );
 	
 // Add Theme Options Tab	
 	// add the admin options page

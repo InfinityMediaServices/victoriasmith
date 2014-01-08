@@ -18,10 +18,7 @@ $(document).ready(function(){
 
 		<div class="offset1 span10">  
         
-        	<h2>Testimonials</h2>
-
-            <p style="margin-bottom:20px;">Here are what participants in Victoria’s workshops say:</p>
-
+        	<h2>Client Testimonials</h2>
 			<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
             	
                 <div class="testimonial">

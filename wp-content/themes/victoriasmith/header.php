@@ -9,6 +9,15 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/responsive.css" />
 <link href='http://fonts.googleapis.com/css?family=Signika+Negative' rel='stylesheet' type='text/css'>
 
+
+<!--[if IE 8]>
+<style>
+	#blocks .widget:first-child { background:@purple; padding: 0 15px }
+				#blocks .widget:first-child + .widget { background:@yellow; } 
+				#blocks .widget:first-child + .widget + .widget { background:@orange; }
+</style>
+<![endif]-->
+
 <title><?php
         if ( is_single() ) { single_post_title(); print ' | '; bloginfo('name'); }
         elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); }
