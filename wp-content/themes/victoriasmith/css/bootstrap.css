@@ -1980,6 +1980,9 @@ a.badge:focus {
   text-indent: -10000px;
   overflow: hidden;
 }
+a {
+  color: #5c2d91;
+}
 .navbar .navbar-inner {
   padding: 0;
 }
@@ -2218,4 +2221,16 @@ p.ws-meta {
 #footer a {
   text-decoration: none;
   color: #474749;
+}
+.alignright {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+.alignleft {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto;
 }
