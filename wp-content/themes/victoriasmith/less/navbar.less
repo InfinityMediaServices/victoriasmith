@@ -489,9 +489,9 @@
 
 // Custom CSS for Dropdown Menus
 .navbar .nav li a { text-decoration:none; }
-.navbar .nav .sub-menu { display:none; position:absolute; top:40px; left:0; border:1px solid @yellow; padding:0; margin-left:0; background-color:@white; z-index:100; width:99%; }
+.navbar .nav .sub-menu { display:none; width: auto; position:absolute; top:40px; left:0; border:1px solid @yellow; padding:0; margin-left:0; background-color:@white; z-index:100; min-width:99%; }
 .navbar .nav li { position:relative; }
 .navbar .nav > li:hover .sub-menu { display:block; }
-	.navbar .nav li ul.sub-menu li { display:block; }
+	.navbar .nav li ul.sub-menu li { display:block; white-space: nowrap; }
 		.navbar .nav li .sub-menu li a { color:@grayDark; text-align:left; text-transform:none; padding:10px 5px; }
 			.navbar .nav li .sub-menu li a:hover { color:@white; }

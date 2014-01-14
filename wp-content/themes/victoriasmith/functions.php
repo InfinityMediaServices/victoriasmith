@@ -197,6 +197,18 @@ function my_register_sidebars() {
 			'after_title' => '</h3>'
 		)
 	);
+
+	register_sidebar(
+		array(
+			'id' => 'collab_mediation',
+			'name' => __( 'Collaborative Practice and Mediation Pages Sidebar' ),
+			'description' => __( 'The Sidebar Blocks on the Collaborative Practice and Mediation Pages. (Max 3 widgets displayed)' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s block"><div class="row-fluid"><div class="inner-wrapper">',
+			'after_widget' => '</div></div></div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
 }
 
     ?>

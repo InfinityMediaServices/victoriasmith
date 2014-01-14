@@ -34,43 +34,11 @@
 
 <script type="text/javascript">
 jQuery(document).ready(function($){	   
-	/* Home Image Slider slider */
-		var scrollSpeed = 30;
-	   
-		// set default position
-		var current = 0;
-	   
-		var containerWidth = 0;   
-		$('.image-slider ul').children().each(function(){
-			containerWidth += $(this).width() + 10;
-		});
-		//console.log(containerWidth);
-	   
-		$('.image-slider ul').children().each(function(){
-			$(this).clone().appendTo('.image-slider ul');
-		});
-	   
-		function bgscroll(){
-	   
-			if(current == containerWidth){
-				current = 0;
-			}
-		   
-			//move the slideshow
-			$('.image-slider ul').css('margin-left', '-'+current+'px');
-			current += 1;
-		}
-	   
-		//Calls the scrolling function repeatedly
-		
-		slideshowInterval = setInterval(bgscroll, scrollSpeed);
-	   
-		$('.image-sliders ul').hover(
-			function(){
-				clearInterval(slideshowInterval);
-			}, function() {
-				slideshowInterval = setInterval(bgscroll, scrollSpeed);
-			});  
+
+    // Hijack click function of # navbar links
+    $('.navbar .nav > li.title-link').click(function(){
+        return false;
+    });
 			
 	//fix firefox submenu bug
 	$("#menu-main-menu > li").iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease();
